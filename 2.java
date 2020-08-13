@@ -1,36 +1,34 @@
 import java.util.*;
-public class SavingAmount {
-	int savings;
-	Scanner sc=new Scanner(System.in);
-	void setter(){
-		int n=sc.nextInt();
-		this.savings=n;
-	}
-	int getter(){return this.savings;}
-	void increament(){this.savings+=1000;}
-	void decreament(){this.savings-=100;}
-	void checkSavings()
-	{
-		if(this.savings>=1000) 
+interface op{
+	void X(String a,String b);
+}
+public class ASGame {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String A,B;int c;
+		A=sc.nextLine();B=sc.nextLine();c=sc.nextInt();
+		op X1=(String a,String b)->{System.out.println((Integer.parseInt(a)+Integer.parseInt(b)));};
+		op X2=(String a,String b)->{System.out.println(a+b);};
+		op X3=(String a,String b)->{
+			int ascii=0;
+			for(int i=0;i<b.length();i++)
+			{
+				ascii+=b.charAt(i);
+			}
+			System.out.println((Integer.parseInt(a)+ascii));
+		};
+		switch(c)
 		{
-			System.out.println("Congratulations! You have saved a good amount");
+		case (1):
+			X1.X(A,B);
+			break;
+		case (2):
+			X2.X(A,B);
+			break;
+		case (3):
+			X3.X(A,B);
 		}
-		else if(this.savings<1000 && this.savings>0)
-		{
-			System.out.println("Insufficient saving!");
-		}
-		else 
-		{
-			System.out.println("You are in debt");
-		}
-	}
-	public static void main(String[] args) 
-	{
-		SavingAmount s=new SavingAmount();
-		s.setter();
-		s.decreament();
-		s.increament();
-		s.checkSavings();
-		System.out.println("Your current savings are Rs "+s.getter());
+		sc.close();
 	}
 }
