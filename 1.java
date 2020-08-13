@@ -1,21 +1,9 @@
 public class SavingAmount {
 	int savings;
-	void setter(int n)
-	{
-		this.savings=n;
-	}
-	int getter()
-	{
-		return this.savings;
-	}
-	void increament()
-	{
-		this.savings+=1000;
-	}
-	void decreament()
-	{
-		this.savings-=100;
-	}
+	void setter(int n){this.savings=n;}
+	int getter(){return this.savings;}
+	void increament(){this.savings+=1000;}
+	void decreament(){this.savings-=100;}
 	void checkSavings()
 	{
 		if(this.savings>=1000) 
