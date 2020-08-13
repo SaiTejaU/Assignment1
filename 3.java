@@ -1,20 +1,15 @@
 import java.util.*;
 class Secret{
-	void Asia(String w)
-	{
-		for(int i=0;i<w.length();i++){System.out.println((char)(w.charAt(i)+2));}
-	}
-	void US(String w)
-	{
+	void Asia(String w){for(int i=0;i<w.length();i++){System.out.println((char)(w.charAt(i)+2));}}
+	void US(String w){
 		for(int i=0;i<w.length();i++){System.out.print((((int)w.charAt(i))+2)+".");}
 		System.out.println();
 	}
 	void Dubai(String w)
 	{
 		StringBuilder res = new StringBuilder();
-        res.append(w); 
-        res=res.reverse();
-        System.out.println(res);
+        res.append(w);
+        System.out.println(res.reverse());
 	}
 }
 public class SecretOp extends Secret {
