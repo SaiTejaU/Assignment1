@@ -8,18 +8,11 @@ public class ASGame {
 		Scanner sc=new Scanner(System.in);
 		String A,B;int c;
 		A=sc.nextLine();B=sc.nextLine();c=sc.nextInt();
-		op X1=(String a,String b)->{
-			System.out.println((Integer.parseInt(a)+Integer.parseInt(b)));
-		};
-		op X2=(String a,String b)->{
-			System.out.println(a+b);
-		};
+		op X1=(String a,String b)->{System.out.println((Integer.parseInt(a)+Integer.parseInt(b)));};
+		op X2=(String a,String b)->{System.out.println(a+b);};
 		op X3=(String a,String b)->{
 			int ascii=0;
-			for(int i=0;i<b.length();i++)
-			{
-				ascii+=b.charAt(i);
-			}
+			for(int i=0;i<b.length();i++){ascii+=b.charAt(i);}
 			System.out.println((Integer.parseInt(a)+ascii));
 		};
 		switch(c)
