@@ -1,6 +1,12 @@
+import java.util.*;
 public class SavingAmount {
 	int savings;
-	void setter(int n){this.savings=n;}
+	Scanner sc=new Scanner(System.in);
+	void setter()
+	{
+		int n=sc.nextInt();
+		this.savings=n;
+	}
 	int getter(){return this.savings;}
 	void increament(){this.savings+=1000;}
 	void decreament(){this.savings-=100;}
@@ -22,7 +28,7 @@ public class SavingAmount {
 	public static void main(String[] args) 
 	{
 		SavingAmount s=new SavingAmount();
-		s.setter(-100);
+		s.setter();
 		s.decreament();
 		s.increament();
 		s.checkSavings();
